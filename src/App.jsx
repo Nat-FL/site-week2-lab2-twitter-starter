@@ -5,9 +5,14 @@ import Advertisements from "./components/Advertisements/Advertisements"
 import { codepathUserProfile, firstTweet, navLinks } from "./constants"
 
 export default function App() {
+
+  console.log({navLinks})
+
   return (
     <div className="app">
-      <Navbar />
+      {/* creates new prop/argument that takes in navLinks properties
+      navLinks is an array of objects */}
+      <Navbar navInfo = {navLinks}/> 
       <main>
         <UserProfile />
         <Feed />
